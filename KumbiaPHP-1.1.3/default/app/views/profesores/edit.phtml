@@ -1,0 +1,33 @@
+<div class="row">
+
+    <?php View::content(); ?>
+    <h1>Formulario de registro</h1>
+
+    <?php echo Form::open(); ?>
+
+    <div class="col s6">
+        <label>Nombres
+            <?php echo Form::text('profesores.Nombres'); ?>
+        </label>
+    </div>
+
+    <div class="col s6">
+        <label>Apellidos
+            <?php echo Form::text('profesores.Apellidos'); ?>
+        </label>
+    </div>
+
+    <div class="col s6">
+        <label>Especialidad
+            <?php echo Form::text('profesores.Especialidades'); ?>
+        </label>
+    </div>
+
+    <div class="col s12">
+        <?= Form::hidden('profesores.Id'); ?>
+        <?php echo Form::submit('Guardar', 'class="btn purple darken-2"') ?>
+    </div>
+
+    <?php echo Form::close(); ?>
+
+</div>

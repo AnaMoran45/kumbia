@@ -1,0 +1,38 @@
+<div class="row">
+
+    <?php View::content(); ?>
+    <h3>Formulario de registro de alumnos</h3>
+
+    <?php echo Form::open(''); ?>
+
+        <div class="col s6">
+            <label>Nombres
+                <?php echo Form::text('alumnos.Nombres'); ?>
+            </label>
+        </div>
+
+        <div class="col s6">
+            <label>Apellidos
+                <?php echo Form::text('alumnos.Apellidos'); ?>
+            </label>
+        </div>
+
+        <div class="col s6">
+            <label>Edad
+                <?php echo Form::number('alumnos.Edad'); ?>
+            </label>
+        </div>
+
+        <div class="col s6">
+            <label>Telefono
+                <?php echo Form::text('alumnos.Numero_telefono'); ?>
+            </label>
+        </div>
+
+        <div class="col s6">
+             <?php echo Form::submit('Guardar', 'class="btn purple darken-2"') ?>
+        </div>
+
+    <?php echo Form::close(); ?>
+
+</div>
