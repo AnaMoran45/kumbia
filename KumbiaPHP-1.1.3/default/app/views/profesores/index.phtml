@@ -1,9 +1,9 @@
 <?php echo View::content() ?>
 <h3>Listado profesores</h3>
 
-<table>
+<table class="striped centered">
     <tr>
-        <thead>
+        <thead class="blue">
             <th>Id</th>
             <th>Nombres</th>
             <th>Apellidos</th>
@@ -13,17 +13,17 @@
 
         <?php foreach ($ListaProfesores->items as $item) : ?>
 
-            <tr>
-                <td><?php echo $item->Id ?></td>
-                <td><?php echo $item->Nombres ?></td>
-                <td><?php echo $item->Apellidos ?></td>
-                <td><?php echo $item->Especialidades ?></td>
-                <td>
-                <?php echo Html::linkAction("edit/$item->Id/", "Editar", 'class="btn"') ?>
-                    <?php echo Html::linkAction("del/$item->Id/", "Borrar", 'class="btn red"') ?>
-            </td>
-            </tr>
-
-        <?php endforeach ?>
+    <tr>
+        <td><?php echo $item->Id ?></td>
+        <td><?php echo $item->Nombres ?></td>
+        <td><?php echo $item->Apellidos ?></td>
+        <td><?php echo $item->Especialidades ?></td>
+        <td>
+            <?php echo Html::linkAction("edit/$item->Id/", "Editar", 'class="btn"') ?>
+            <?php echo Html::linkAction("del/$item->Id/", "Borrar", 'class="btn red"') ?>
+        </td>
     </tr>
+
+<?php endforeach ?>
+</tr>
 </table>
